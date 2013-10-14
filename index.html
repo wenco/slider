@@ -244,5 +244,24 @@ a {
     </div>
   </div>
 </div>
+<script>
+	 //js调用
+$(function () {
+    $.slider({
+      bigID: '#J-Pic',
+      smallID: '#J-Text',
+      clickType: 'hover',
+      Time: 6000,
+      Class: 'active'
+    });
+    $.scrollPic({
+      picID: '#J-Scroll',//图片
+      leftID: '#J-Prev',//左ID
+      rightID: '#J-Next',//右ID
+      txtID: '#J-Txt',//文字ID
+      Time: 3000//轮换时间
+    });
+});
+</script>
 </body>
 </html>
