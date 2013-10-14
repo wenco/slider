@@ -1,23 +1,73 @@
+<!--感谢你使用slider插件，有关BUG或改进请联系love-me-msn#live.cn-->
 <!doctype html>
 <html>
 <head>
 <meta charset="utf-8">
 <title>slider示例</title>
+<meta name="author" content="馨竹"
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script src="./slider.js"></script>
 <style>
+body {
+	font: 14px/22px "Microsoft yahei", "SimSun", "ff-meta-serif-web-pro-1", "ff-meta-serif-web-pro-2", Cambria, Georgia, serif;
+	-webkit-tap-highlight-color: rgb(255,255,158);
+	margin: 0;
+	padding: 0;
+	position: relative;
+	background: rgb(236,236,236);
+	color: rgb(87,84,83);
+	-webkit-text-size-adjust: 100%; /* Stops Mobile Safari from auto-adjusting font-sizes */
+}
+a {
+	text-decoration: none;
+}
+.clearfix {
+ *zoom:1;
+}
+.clearfix:after {
+	display: block;
+	overflow: hidden;
+	clear: both;
+	height: 0;
+	visibility: hidden;
+	content: ".";
+}
+.container {
+	background: #fff;
+	width: 900px;
+	margin: 0 auto;
+	padding: 0 50px;
+}
 /*banner*/
-
 .banner {
 	height: 520px;
 	width: 100%;
 	position: relative;
 }
+.banner .container {
+	width:1000px;
+	padding: 0;
+}
 .banner a, .banner a:hover {
 	color: rgb(87,84,83);
 	text-decoration: none;
 }
+.banner1 {
+	background: url(http://f.hiphotos.baidu.com/album/h%3D900%3Bcrop%3D0%2C0%2C1600%2C900/sign=e586defa533d269731d3045d65c0d189/1e30e924b899a9010962b8061f950a7b0208f5af.jpg) 50% 50%;
+}
+.banner2 {
+	background: url(http://a.hiphotos.baidu.com/album/w%3D1600%3Bcrop%3D0%2C0%2C1600%2C900/sign=659379cca586c9170803563ff90d4bac/2cf5e0fe9925bc31ac399cac5cdf8db1cb13709a.jpg) 50% 50%;
+}
+.banner3 {
+	background: url(http://c.hiphotos.baidu.com/album/w%3D1600%3Bcrop%3D0%2C0%2C1600%2C900/sign=a619c23131fa828bd12399e5cd2f7a57/a6efce1b9d16fdfab57680dab68f8c5494ee7bef.jpg) 50% 50%;
+}
+.banner4 {
+	background: url(http://c.hiphotos.baidu.com/album/h%3D900%3Bcrop%3D0%2C0%2C1600%2C900/sign=8a5b7f014e086e0675a8334b32331886/a8773912b31bb051cadb5018347adab44aede007.jpg) 50% 50%;
+}
 .slider, .slider-txt {
 	list-style: none;
+	margin: 0;
+	padding: 0;
 }
 .slider, .videos li, .activity-ul li {
 	background: url(/images/loadinglit.gif) 50% 50% no-repeat;
@@ -76,9 +126,15 @@
 	left: 0;
 	top: -4px;
 }
+.activity {
+	width: 510px;
+}
+.activity img {
+	padding-top: 4px;
+}
 .activity-box {
 	position: relative;
-	height: 190px;
+	height: 520px;
 	overflow: hidden;
 }
 .activity-ul {
@@ -95,10 +151,10 @@
 	float: left;
 	position: relative;
 }
-.activity-ul a, .activity-ul img {
+.activity-ul a {
 	display: block;
-	width: 334px;
-	height: 190px;
+	width: 510px;
+	height: 520px;
 }
 .activity-ul a span {
 	background: #575453;
@@ -107,7 +163,7 @@
 	height: 16px;
 	line-height: 17px;
 	font-weight: 400;
-	width: 226px;
+	width: 100%;
 	overflow: hidden;
 	white-space: nowrap;
 	text-overflow: ellipsis;
@@ -158,14 +214,13 @@
 }
 </style>
 </head>
-
 <body>
 <div id="banner" class="banner">
   <ul id="J-Pic" class="slider">
-    <li><a name="pic1" href="/shop/" title="辣妈正传" target="_blank" class="banner1"><span class="vi">辣妈正传</span></a></li>
-    <li><a name="pic2" href="/shop/" title="你的摄影平台" target="_blank" class="banner2"><span class="vi">你的摄影平台</span></a></li>
-    <li><a name="pic3" href="/shop/" title="怎么玩" target="_blank" class="banner3"><span class="vi">怎么玩</span></a></li>
-    <li class="active"><a name="pic4" href="/shop/" title="HOE MUCH" target="_blank" class="banner4"><span class="vi">HOE MUCH</span></a></li>
+    <li><a name="pic1" href="http://tuterm.com" title="辣妈正传" target="_blank" class="banner1"><span class="vi">辣妈正传</span></a></li>
+    <li><a name="pic2" href="http://tuterm.com" title="你的摄影平台" target="_blank" class="banner2"><span class="vi">你的摄影平台</span></a></li>
+    <li><a name="pic3" href="http://tuterm.com" title="怎么玩" target="_blank" class="banner3"><span class="vi">怎么玩</span></a></li>
+    <li class="active"><a name="pic4" href="http://tuterm.com" title="HOE MUCH" target="_blank" class="banner4"><span class="vi">HOE MUCH</span></a></li>
   </ul>
   <div class="container">
     <ul id="J-Text" class="slider-txt clearfix">
@@ -176,14 +231,18 @@
     </ul>
   </div>
 </div>
-<div class="activity-box">
-  <ul class="activity-ul" id="J-Scroll">
-    <li><a href="#" title="辣妈正传引领潮流" target="_bank"><img src=" http://www.imscv.com/uploads/130719/8-130G914530C60.jpg" alt="辣妈正传引领潮流" /><span>辣妈正传引领潮流</span></a></li>
-    <li><a href="#" title="辣妈正传引领潮流" target="_bank"><img src=" http://www.imscv.com/uploads/130719/8-130G914530C60.jpg" alt="辣妈正传引领潮流" /><span>辣妈正传引领潮流</span></a></li>
-    <li><a href="#" title="辣妈正传引领潮流" target="_bank"><img src=" http://www.imscv.com/uploads/130719/8-130G914530C60.jpg" alt="辣妈正传引领潮流" /><span>辣妈正传引领潮流</span></a></li>
-    <li><a href="#" title="辣妈正传引领潮流" target="_bank"><img src=" http://www.imscv.com/uploads/130719/8-130G914530C60.jpg" alt="辣妈正传引领潮流" /><span>辣妈正传引领潮流</span></a></li>
-  </ul>
-  <div class="click"> <a id="J-Prev" href="javascript:void(0);" title="上一活动">&lt;</a><span id="J-Txt">1</span><a id="J-Next" href="javascript:void(0);" title="下一活动">&gt;</a> </div>
+<div class="container">
+  <div class="activity">
+    <div class="activity-box">
+      <ul class="activity-ul" id="J-Scroll">
+        <li><a href="http://tuterm.com" title="刘诗诗" target="_bank"><img src="http://g.hiphotos.baidu.com/album/w%3D2048/sign=bb93e427d439b6004dce08b7dd68342a/b90e7bec54e736d181736bcc9a504fc2d4626996.jpg" alt="刘诗诗" /><span>刘诗诗</span></a></li>
+        <li><a href="http://tuterm.com" title="刘诗诗" target="_bank"><img src="http://g.hiphotos.baidu.com/album/w%3D2048/sign=bb93e427d439b6004dce08b7dd68342a/b90e7bec54e736d181736bcc9a504fc2d4626996.jpg" alt="刘诗诗" /><span>刘诗诗</span></a></li>
+        <li><a href="http://tuterm.com" title="刘诗诗" target="_bank"><img src="http://g.hiphotos.baidu.com/album/w%3D2048/sign=bb93e427d439b6004dce08b7dd68342a/b90e7bec54e736d181736bcc9a504fc2d4626996.jpg" alt="刘诗诗" /><span>刘诗诗</span></a></li>
+        <li><a href="http://tuterm.com" title="刘诗诗" target="_bank"><img src="http://g.hiphotos.baidu.com/album/w%3D2048/sign=bb93e427d439b6004dce08b7dd68342a/b90e7bec54e736d181736bcc9a504fc2d4626996.jpg" alt="刘诗诗" /><span>刘诗诗</span></a></li>
+      </ul>
+      <div class="click"> <a id="J-Prev" href="javascript:void(0);" title="上一活动">&lt;</a><span id="J-Txt">1</span><a id="J-Next" href="javascript:void(0);" title="下一活动">&gt;</a> </div>
+    </div>
+  </div>
 </div>
 </body>
 </html>
