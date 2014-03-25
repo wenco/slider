@@ -4,7 +4,7 @@ slider
 banner slider
 
 二种焦点图效果
-
+<pre>
 <div class="eco sub-f5">
         <ul class="z-eco-list mt8 clear" id="J-push-eco" style="width: 960px; left: -320px;">
           <li class=""><a href="http://new.apdnews.com/photo/68798.html" title="一周图片精选2.8-2.14" target="_blank" class="hot-pic"> <img src="http://img.apdnews.com/1/2014/0214/20140214165358660996_320_200.jpg?2" alt="一周图片精选2.8-2.14"> <span class="texthide">一周图片精选2.8-2.14</span> </a></li>
@@ -13,6 +13,7 @@ banner slider
 
         </ul>
         <a title="上一条" class="j-prev" href="javascript:void(0);" id="J-EPrev"><span class="hidden">上一条</span></a> <span class="eco-cout" id="J-CoutE" style="width: 81px;"><a href="javascript:void(0);" class=""><span class="hide">1</span></a><a href="javascript:void(0);" class="on"><span class="hide">2</span><span class="go" style="overflow: hidden; width: 1.06335px;"></span></a><a href="javascript:void(0);" class=""><span class="hide">3</span></a></span> <a title="下一条" class="j-next" href="javascript:void(0);" id="J-ENext"><span class="hidden">下一条</span></a> </div>
+
 
 $(function () {
 	$('#J-push-eco1').wkzeng({
@@ -48,3 +49,4 @@ $(function () {
     });
     
 });
+</pre>
